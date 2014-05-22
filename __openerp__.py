@@ -14,7 +14,7 @@ test of test in test of the test
     'depends': [
         'project',
     ],
-    'data': [],
+    'data': ['project_gitlab.xml'],
     'demo': [],
     'test': [],
     'installable': True,

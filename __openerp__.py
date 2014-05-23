@@ -12,7 +12,7 @@ test of test in test of the test
     'author': 'Claudio Mignanti',
     'website': '',
     'depends': [
-        'project',
+        'project_issue',
     ],
     'data': ['project_gitlab.xml'],
     'demo': [],

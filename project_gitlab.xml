@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
   <data>
-    <record model="ir.ui.view" id="gitlab_projects_project">
-        <field name="name">project.project.form</field>
+    <record model="ir.ui.view" id="gitlab_projects">
+        <field name="name">project.project.form.gitlab</field>
         <field name="model">project.project</field>
         <field name="inherit_id" ref="project.edit_project" />
         <field name="arch" type="xml">
-            <xpath expr="/form/sheet/group/group[2]/field" position="after">
-                <field name="url_base" />
-                <field name="prj_id" />
-                <field name="private_token" />
-            </xpath>
+            <notebook position="inside">
+                <page string="Gitlab Integration">
+                    <label string="Repo integration Integration"/>
+                    <field name="prj_group"/>
+                    <button name="_create_repo" string="Crea repository"/>
+                    <newline/>
+                    <!-- fixme: strings from orm -->
+                    <label string="Configuration for your issue Integration"/>
+                    <field name="url_base"/>
+                    <field name="private_token"/>
+                    <field name="prj_id"/>
+                </page>
+            </notebook>
         </field>
     </record>
   </data>

@@ -6,11 +6,12 @@ from openerp.osv import fields, osv
 class project_gitlab(osv.osv):
 
     _inherit = "project.project"
-    
     _columns = {
-        'url_base': fields.text('url_base'),
-        'prj_id': fields.integer('prj_id'),
-        'private_token': fields.char('private_token', size=21)
+        'url_base': fields.char('Base api url', size=200),
+        'prj_id': fields.integer('Gitlab project id'),
+        'private_token': fields.char('Access private token', size=21),
+        'prj_group': fields.char('Gitlab repo group', size=30),
+        'repo_exists': fields.boolean('repo_exists')
     }
 
 project_gitlab()

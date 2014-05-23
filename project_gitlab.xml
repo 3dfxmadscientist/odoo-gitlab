@@ -8,7 +8,7 @@
         <field name="arch" type="xml">
             <notebook position="inside">
                 <page string="Gitlab Integration">
-                    <label string="Repo integration Integration"/>
+                    <label string="Repo Integration"/>
                     <field name="prj_group"/>
                     <button name="_create_repo" string="Crea repository"/>
                     <newline/>

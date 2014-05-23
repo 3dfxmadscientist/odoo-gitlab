@@ -14,4 +14,9 @@ class project_gitlab(osv.osv):
         'repo_exists': fields.boolean('repo_exists')
     }
 
+    def _create_repo(self, cr, uid, context=None):
+        self.write(cr, uid, context, {'private_token': 'new'})
+        return True
+
+
 project_gitlab()
